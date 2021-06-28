@@ -1,9 +1,10 @@
 - name: Test s3
   hosts: localhost
   connection: local
+ 
   tasks:
     - name: Create new bucket
       aws_s3:
-        bucket:  "{{ bucket_name }}"
+        bucket: "{{ bucket_name }}"
         mode: create
-      region: us-east-2
+        region: us-east-1
